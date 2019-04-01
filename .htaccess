@@ -1,0 +1,27 @@
+<IfModule mod_rewrite.c>
+# BEGIN
+RewriteEngine On
+# 首页、分类浏览、数据归档、最近更新、排行榜、意见反馈
+RewriteRule ^(index|webdir|category|update|archives|top|feedback|link|rssfeed|sitemap)(/?)$ index.php?mod=$1
+# 最近更新
+RewriteRule ^update\/(\d+)\.html$ index.php?mod=update&days=$1
+RewriteRule ^update\/([0-9]+)-([0-9]+)\.html$ index.php?mod=update&days=$1&page=$2
+# 数据归档
+RewriteRule ^archives\/(\d+)\.html$ index.php?mod=archives&date=$1
+RewriteRule ^archives\/(\d+)-(\d+)\.html$ index.php?mod=archives&date=$1&page=$2
+# 站内搜索
+RewriteRule ^search\/(name|url|tags|intro)\/(.+)-(\d+)\.html$ index.php?mod=search&type=$1&query=$2&page=$3
+RewriteRule ^search\/(name|url|tags|intro)\/(.+)\.html$ index.php?mod=search&type=$1&query=$2
+# 详细信息
+RewriteRule ^siteinfo\/(\d+)\.html$ index.php?mod=siteinfo&wid=$1
+# 单页
+RewriteRule ^diypage\/(\d+)\.html$ index.php?mod=diypage&pid=$1
+# RSS
+RewriteRule ^rssfeed\/(\d+)\.html$ index.php?mod=rssfeed&cid=$1
+# SiteMap
+RewriteRule ^sitemap\/(\d+)\.html$ index.php?mod=sitemap&cid=$1
+# 分类目录
+#RewriteRule ^webdir\/(.+)\/(\d+)\.html$ index.php?mod=webdir&cid=$2
+RewriteRule ^webdir\/(.+)\/([0-9]+)-([0-9]+)\.html$ index.php?mod=webdir&cid=$2&page=$3
+# END
+</IfModule>

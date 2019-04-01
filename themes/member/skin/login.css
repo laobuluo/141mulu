@@ -1,0 +1,66 @@
+@charset "utf-8";
+/* global */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {margin: 0; padding: 0;}
+body, button, input, select, textarea {font: 12px/1.5 "Segoe UI", tahoma, arial, \5b8b\4f53, sans-serif;}
+h1, h2, h3, h4, h5, h6 {font-size: 100%;}
+address, cite, dfn, em, var {font-style: normal;}
+code, kbd, pre, samp {font-family: courier new, courier, monospace;}
+small {font-size: 12px;}
+ul, ol {list-style: none;}
+a {text-decoration: none;}
+a:hover {text-decoration: underline;}
+sup {vertical-align: text-top;}
+sub {vertical-align: text-bottom;}
+legend {color: #000;}
+fieldset, img {border: 0;}
+button, input, select, textarea {font-size: 100%;}
+table {border-collapse: collapse; border-spacing: 0;}
+/* clear float */
+.clearfix:after {clear: both; content: '.'; display: block; font-size: 0; height: 1; visibility: hidden;}
+*html .clearfix {zoom: 1;}
+*:first-child+html .clearfix {zoom: 1;}
+
+/* custom */
+body {background: #f2f2f2; color: #555;}
+body, button, input, select, textarea {color: #1c1c1c; font-family: Arial, 'ËÎÌו';}
+a {color: #1c1c1c; text-decoration: none;}
+a:hover {color: #1864c7; text-decoration: underline;}
+.blank10 {clear: both; display: block; font-size: 10px; height: 10px; line-height: 10px; width: 100%;}
+/* input, button */
+.ipt {background: url(ipt.png) no-repeat; border: solid 1px #c9c9c9; font-size: 14px; padding: 5px 8px;}
+.btn {background: #F1612D; border: solid 1px #518ad4; color: #fff; padding: 3px 10px;}
+/* wrapper */
+.wrapper {margin: 0 auto; width: 1000px;}
+.header {height: 90px;}
+.logo {background: url(logo.png) no-repeat; color: #ff0; display: block; float: left; font: 40px normal; height: 70px; margin-top: 10px; width: 180px;}
+.logo h1 {display: none;}
+.toplink {color: #ccc; float: right; font-size:  13px; margin: 35px 30px 0 200px;}
+.toplink a {background: #F1612D; color: #fff; margin-right: 1px; padding: 3px 5px;}
+/* loginform */
+.loginform {background: #fff; border: solid 1px #d8d8d8; padding: 10px 0;}
+.loginform h3 {font: bold 14px normal; margin-top: 20px;}
+.loginform h3 span {background: #F1612D; color: #fff; padding: 10px;}
+.loginform ul {font: 13px normal; margin: 0 auto; padding: 20px 0; width: 350px;}
+.loginform li {padding: 12px 0;}
+.loginform li label {display: block; float: left; padding-top: 8px; text-align: right; width: 70px;}
+.loginform li p {color: #ccc; float: left; font-size: 12px; padding: 8px 0 0 70px;}
+.tipinfo {border-left: solid 1px #dadada; padding: 20px;}
+a.nowlink {background: #f60; border: solid 1px #f30; color: #fff; font-size: 14px; padding: 5px 10px; width: 80px;}
+/* combox */
+#combox {background: #fff;}
+/* regform */
+.regform {background: #fff; border: solid 1px #d8d8d8; padding: 10px 0;}
+.regform h3 {font: bold 14px normal; margin-top: 20px;}
+.regform h3 span {background: #F1612D; color: #fff; padding: 10px;}
+.regform ul {font: 12px normal; margin: 0 auto; padding: 20px 0; width: 500px;}
+.regform li {padding: 10px 0;}
+.regform li label {display: block; float: left; padding-top: 8px; text-align: right; width: 100px;}
+.regform li p {color: #999; font-size: 12px; padding: 6px 0 0 100px;}
+.regform li span {color: #666; font: 12px normal; padding-left: 5px;}
+.textinfo {background: #F1612D; border: dashed 1px #f60; line-height: 30px; margin: 10px; padding: 10px;}
+/* tipbox */
+#tipbox {border: solid 1px #e8e8e8; padding: 1px;}
+#tipbox h2 {background: url(tbg.png) repeat-x; color: #fff; font: bold 14px normal; padding: 10px;}
+#tipbox p {font-size: 14px; padding: 100px 0; text-align: center;}
+/* footer */
+.footer {margin-top: 10px; padding: 10px; text-align: center;}

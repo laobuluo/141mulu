@@ -1,0 +1,22 @@
+<div class="topbox">
+	<div class="wrapper">
+		<div class="clearfix sobox">
+    	<a href="{#$site_root#}" class="logo" title="{#$site_title#}"><h1>{#$site_name#}</h1></a>
+		<div class="search">
+    		<form name="sofrm" class="sofrm" method="get" action="" onSubmit="return rewrite_search()">
+				<input name="mod" type="hidden" id="mod" value="search" />
+				<input name="type" type="hidden" id="type" value="name" />
+				<div id="selopt">
+                	<div id="cursel">网站名称</div>
+				</div>
+				<input name="query" type="text" class="sipt" id="query" onFocus="this.value='';" />
+				<input type="submit" class="sbtn" value="搜 索" />
+			</form>
+		</div>
+		<div class="login-status">
+			{#nocache#}{#$login_status#}{#/nocache#}
+		</div>
+	</div>
+		
+	</div>
+</div>

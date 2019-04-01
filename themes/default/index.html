@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{#$site_title#} - 精选优秀个人独立博客</title>
+<meta name="Keywords" content="{#$site_keywords#}" />
+<meta name="Description" content="{#$site_description#}" />
+<meta http-equiv="Cache-Control" content="no-transform"/>
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link href="{#$site_root#}public/style/default/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">var sitepath = '{#$site_root#}'; var rewrite = '{#$cfg.is_enabled_rewrite#}';</script>
+<script type="text/javascript" src="{#$site_root#}public/scripts/jquery.min.js"></script>
+<script type="text/javascript" src="{#$site_root#}public/scripts/common.js"></script>
+</head>
+<body>
+{#include file="topbar.html"#}
+{#include file="header.html"#}
+<div class="wrapper">
+	<div class="homebox">
+		<div class="homebox-left">
+{#if $cfg.home_isbest > '0'#}
+			<div class="bestbox">
+            <div class="coolbox-title"><span>最新加入网站</span></div>
+				<div class="bestbox-body">
+					<ul class="clearfix bestbox-list"> 
+          	{#nocache#}
+			{#foreach from=get_websites(0, {#$cfg.home_instat#}, false, 'instat') item=instat#}
+			<li><a href="{#$instat.web_url#}" rel="nofollow" target="_blank">{#$instat.web_name#}</a></li>
+		    {#/foreach#}
+            {#/nocache#}
+					</ul>            
+				</div>
+			</div>
+        	<div class="blank10"></div>
+          
+          <div class="coolbox" style="padding:5px">
+<div align="center">
+<a href="#" target="_blank" rel="nofollow"><img src="{#$site_root#}public/images/qcloud01.jpg" width="728" height="90"></a>
+</div>
+          </div>
+          
+           <div class="blank10"></div>   
+          
+{#/if#}
+               <div class="coolbox">            
+				<div class="coolbox-title"><span>优秀个人网站</span></div>
+				<div class="coolbox-body">
+					<ul class="coolbox-list">
+						{#foreach from=get_best_categories() item=item name=isite#}
+						<li class="clearfix"><strong><a href="{#$item.cate_link#}" title="{#$item.cate_name#}">{#$item.cate_name#}</a></strong><span>{#foreach from=get_websites($item.cate_id, 9) item=cool#}<a href="{#$cool.web_link#}" title="{#$cool.web_name#}">{#$cool.web_name#}</a>{#/foreach#}</span></li>
+						{#if $smarty.foreach.isite.iteration % 5 == 0 && $smarty.foreach.isite.iteration != 20#}
+						<li class="sline"></li>
+						{#/if#}
+						{#/foreach#}
+					</ul>
+				</div>
+			</div>
+<div class="blank10"></div>          
+          <div class="coolbox" style="padding:5px">
+<div align="center">
+<a href="#" target="_blank" rel="nofollow"><img src="{#$site_root#}public/images/qcloud02.jpg" width="728" height="90"></a>
+</div>
+          </div>
+		</div>
+		<div class="homebox-right">
+			<div class="newsbox">
+				<div class="newsbox-title">数据统计</div>
+				<ul class="newsbox-list">
+					<li>优秀站点：1{#$stat.website#}</li>
+					<li>待审站点：1{#$stat.apply#}</li>
+				</ul>
+			</div>
+			<div class="blank10"></div>
+{#if $cfg.home_new > '0'#}     
+<!--侧栏广告-->
+{#get_adcode(2)#}
+<!--end 侧栏广告--> 
+<div class="blank10"></div>
+            <div class="newbox">
+				<div class="newbox-title">最新收录</div>
+				<ul class="newbox-list">
+                	{#foreach from=get_websites(0, {#$cfg.home_new#}) item=new#}
+					<li><span>{#$new.web_ctime#}</span><a href="{#$new.web_link#}" title="{#$new.web_name#}">{#$new.web_name#}</a></li>
+                   	{#/foreach#}
+				</ul>
+			</div>
+{#/if#}
+		</div>
+	</div>
+</div>
+<div class="blank10"></div>
+<div class="wrapper">
+{#if $cfg.home_instat > '0'#}
+{#/if#}
+	<div class="linkbox clearfix">
+		<div class="linkbox-title">友情链接</div>
+		<ul class="linkbox-list">
+        	{#foreach from=get_links() item=link#}
+			<li><a href="{#$link.link_url#}" target="_blank">{#$link.link_name#}</a></li>
+            {#/foreach#}
+		</ul>
+	</div>
+</div>
+{#include file="footer.html"#}
+</body>
+</html>

@@ -1,0 +1,84 @@
+@charset "utf-8";
+/* global */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {margin: 0; padding: 0;}
+body, button, input, select, textarea {font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif; vertical-align: middle;}
+h1, h2, h3, h4, h5, h6{font-size: 100%;}
+address, cite, dfn, em, var{font-style: normal;}
+code, kbd, pre, samp {font-family: courier new, courier,monospace;}
+small {font-size: 12px;}
+ul, ol{list-style: none;}
+a {text-decoration: none;}
+a:hover{text-decoration: underline;}
+sup {vertical-align: text-top;}
+sub {vertical-align: text-bottom;}
+legend{color: #000;}
+fieldset, img{border: 0;}
+button, input, select, textarea{font-size: 100%;}
+table {border-collapse: collapse; border-spacing: 0;}
+/* custom */
+body {background: #f2f2f2; color: #555;}
+body, input, select, textarea {color: #1c1c1c; font-family: Arial, 'ËÎÌו';}
+a {color: #03c; text-decoration: none;}
+a:hover {color: #f30; text-decoration: underline;}
+.ipt {background: url(ipt.png) no-repeat; border: solid 1px #c9c9c9; font: 14px normal; padding: 5px;}
+.btn {background: #66b12e; border: 0; color: #fff; height: 28px; padding: 0 6px;}
+/* clearfix */
+.clearfix:after {clear: both; content: "."; display: block; height: 0; visibility: hidden;}
+.clearfix {display: inline-table;}
+/* hides from IE-mac \*/
+.clearfix {height: 1%;}
+.clearfix {display: block;}
+/* wrapper */
+#wrapper {background: #f2f2f2; margin: 0 auto; width: 950px;}
+#header {position: relative;}
+#topbox {height: 80px;}
+#logo {background: url(logo.png) no-repeat; color: #ff0; display: block; float: left; font: 40px normal; height: 80px; width: 200px;}
+#other {float: right; height: 80px; width: 750px;}
+/* navbar */
+#navbar {background: #0b5eb8; height: 35px;}
+#navbar ul {}
+#navbar li {float: left; font-size: 14px; height: 35px; line-height: 35px;}
+#navbar a {color: #fff; display: block; padding: 0 20px; text-decoration: none;}
+#navbar a:hover {background: #8dc540;}
+.navline {display: block; border-left: solid 1px #0053ac; border-right: solid 1px #1d6bb8;}
+.selected {background: #7dbc39;}
+.home {background: #f60; position: absolute; right: 0;}
+/* sitepath */
+#sitepath {background: #f9f9f9; border-bottom: solid 1px #f1f1f1; padding: 10px;}
+/* mainbox */
+#mainbox {padding: 10px;background: #ffffff;}
+/* homebox */
+#homebox {padding: 10px;}
+#homebox h2 {font: bold 14px normal;}
+#homebox ol {padding: 10px 0;}
+#homebox ol li {font-size: 13px; padding: 5px 0;}
+#homebox ol li strong {color: #f00;}
+/* listbox */
+#listbox {}
+#listbox table {}
+#listbox table tr th {background: #f9f9f9; height: 30px;}
+#listbox table tr td {background: #fff; border-bottom: solid 1px #ececec; height: 30px; text-align: center;}
+#listbox table tr .ltext {text-align: left;}
+#listbox table tr .data {font-size: 10px;}
+/* showpage */
+#showpage {display: block; font-size: 12px; text-align: left; padding: 10px 0;}
+.total_page, .jump_page {background: #1678bd; border: solid 1px #096cb2; color: #fff; display: block; float: left; margin-right: 5px; padding: 3px 5px;}
+.first_page, .last_page, .prev_page, .next_page, .pages {background: #fff; border: 1px solid #096cb2; color: #486ba2; display: block; float: left; margin-right: 5px; padding: 3px 5px; text-decoration: none;}
+.current {background: #1678bd; color: #fff; display: block; float: left; margin-right: 5px; padding: 4px 5px;}
+/* formbox */
+#formbox {margin-left: 200px;}
+#formbox ul {padding-bottom: 10px;}
+#formbox li {padding: 10px;}
+#formbox li strong {display: block; float: left; font-weight: normal; text-align: right; width: 90px;}
+#formbox li p {color: #ccc; float: left; padding: 8px 0 0 90px;}
+/* claimbox */
+#claimbox {}
+#claimbox table {border: solid 1px #e8e8e8;}
+#claimbox table tr th {background: #eff9ff; font-weight: normal; padding: 8px; text-align: left;}
+#claimbox table tr td {background: #fefefe; line-height: 23px; padding: 8px;}
+/* step */
+.step {}
+.step dt {border-bottom: solid 1px #e1e1e1; font: normal 20px normal; padding: 10px;}
+.step dd {padding: 10px;}
+/* footer */
+#footer {background: #0b5eb8; color: #fff; padding: 8px; text-align: center;}

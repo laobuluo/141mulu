@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{#$site_title#}</title>
+<meta name="Keywords" content="{#$site_keywords#}" />
+<meta name="Description" content="{#$site_description#}" />
+<meta http-equiv="Cache-Control" content="no-transform"/>
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link href="{#$site_root#}public/style/default/style.css" rel="stylesheet" type="text/css" />
+{#include file="script.html"#}
+</head>
+<body>
+{#include file="topbar.html"#}
+{#include file="header.html"#}
+<div class="wrapper">
+	<div class="mainbox">
+    	<div class="mainbox-left">
+            <div class="siteinfo">
+            	<h1 class="wtitle">{#$web.web_name#}</h1>
+				<ul class="wdata">
+					<li class="line"><em style="color: #f00;">{#$web.web_views#}</em>人气指数</li>
+					<li class="line"><em style="color: #f60;">{#$web.web_ctime#}</em>收录日期</li>
+					<li><em style="color: #f60;">{#$web.web_utime#}</em>更新日期</li>
+				</ul>
+				<div class="clearfix params">
+					<a href="{#$web.web_furl#}" target="_blank"><img src="https://blinky.nemui.org/shot?{#$web.web_url#}" width="180" height="120" alt="{#$web.web_name#}" class="wthumb" /></a>
+					<ul class="siteitem">
+                        <li><strong>网站名称：</strong>{#$web.web_name#}</li>
+						<li><strong>网站地址：</strong><a href="{#$web.web_furl#}" target="_blank" class="visit" onClick="clickout({#$web.web_id#})"><font color="#008000">{#$web.web_url#}</font></a></li>
+                        <li><strong>网站标签：</strong>{#$web.web_tags#}</li>
+						<li><strong>网站描述：</strong><span style="line-height: 23px;">{#$web.web_intro#}</span></li>
+						<li></li>                        
+					</ul>
+<div align="center"><!--广告位（3）-->{#get_adcode(3)#}<!--end 广告位（3）--></div>                 
+				</div>
+			</div>
+			<div class="blank10"></div>
+			<div class="clearfix relsite">
+				<div class="relsite-title">您可能感兴趣的一些网站</div>
+				<ul class="relsite-list">
+              		{#foreach from=$related_website item=rel#}
+               		<li><a href="{#$rel.web_link#}" target="_blank" title="{#$rel.web_name#}"><img src="https://blinky.nemui.org/shot?{#$rel.web_url#}" width="130" height="100" alt="{#$rel.web_name#}" /><p>{#$rel.web_name#}</p></a></li>
+               		{#/foreach#}
+				</ul>
+			</div>
+		</div>
+		<div class="mainbox-right">
+<div class="newbox" align="center">          
+<!--侧栏广告-->
+{#get_adcode(2)#}
+<!--end 侧栏广告-->
+</div>  
+<div class="blank10"></div>                 
+			<div class="newbox">
+				<div class="newbox-title">最新收录</div>
+				<ul class="newbox-list">
+                	{#foreach from=get_websites(0, 12) item=new#}
+					<li><span>{#$new.web_ctime#}</span><a href="{#$new.web_link#}" title="{#$new.web_name#}">{#$new.web_name#}</a></li>
+                   	{#/foreach#}
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+{#include file="footer.html"#}
+</body>
+<!--link TS-->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!--end link TS-->
+</html>

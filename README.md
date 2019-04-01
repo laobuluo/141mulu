@@ -21,12 +21,22 @@
 
 **系统要求支持**
 1、支持PHP5.3+MYSQL
-2、建议是APACHE系统或者IIS系统，因为只有这两个可以支持伪静态规则，NGINX目前没有伪静态规则
+2、建议是APACHE系统
 
+**演示网站和支持**
+
+1、演示网站：[https://www.141.biz/][3]
+
+2、作者网站（老蒋）：[https://www.itbulu.com/][4]
+
+3、发布支持网站：[https://www.laobuluo.com/][5]
 
 
   [1]: http://www.sugarhosts.com/members/aff.php?aff=571
   [2]: https://www.laobuluo.com/tengxunyun/
+  [3]: https://www.141.biz/
+  [4]: https://www.itbulu.com/
+  [5]: https://www.laobuluo.com/
 
 
 
